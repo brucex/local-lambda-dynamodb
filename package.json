@@ -1,0 +1,23 @@
+{
+  "name": "local-lambda-dynamodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "create-table": "lambda-local -l ./dynamoCommands/createTable.js -e event.json -t 30",
+    "list-table": "lambda-local -l ./dynamoCommands/listTable.js -e event.json -t 30",
+    "lambda": "lambda-local -l index.js -e event.json -t 30",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "local-dynamo": "^0.5.0",
+    "node-lambda": "^0.12.0"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.298.0",
+    "lambda-local": "^1.5.1",
+    "uuid": "^3.3.2"
+  }
+}
